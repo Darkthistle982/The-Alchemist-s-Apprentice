@@ -14,7 +14,7 @@ $(document).ready(function () {
     var potionProgress = 0;
 
     $("#potion-progress").text(potionProgress);
-    $("#wins")
+    $("#wins").text("Wins: " + wins);
 });
 
 
