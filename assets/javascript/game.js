@@ -48,7 +48,16 @@ $(document).ready(function () {
         // console.log(potionProgress);
         $("#potion-progress").text(potionProgress);
     });
-
-
-
+    $("#amethyst").on("click", function(){
+        potionProgress = potionProgress + amethyst;
+        $("#potion-progress").text(potionProgress);
+    });
+    $("#dragon-glass").on("click", function(){
+        potionProgress = potionProgress + dragonGlass;
+        $("#potion-progress").text(potionProgress);
+    });
+    $("#heartstone").on("click", function(){
+        potionProgress = potionProgress + heartstone;
+        $("#potion-progress").text(potionProgress);
+    });
 });
