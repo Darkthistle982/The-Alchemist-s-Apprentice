@@ -32,14 +32,13 @@ $(document).ready(function () {
     }
     //function to run on a win condition
     function win() {
-        alert("You've done it! Congratulations!");
         wins++;
         $("#wins").text("Wins: " + wins);
         reset();
     }
     //function to run on a loss condition
     function loss() {
-        alert("Oh no! Now you've done it! Clean up and try again.");
+        $("audio#explosion")[0].play();
         losses++;
         $("#losses").text("Losses: " + losses);
         reset();
