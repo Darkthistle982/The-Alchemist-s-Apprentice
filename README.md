@@ -27,4 +27,5 @@ Credit to Music from https://filmmusic.io
 * Each button is assigned a random number between 1 and 12.
 * The target Potion Value is randomly generated as a number between 19 and 120.
 * The value assigned to each crystal button is hidden from the user. 
-* 
+* A new game starts, and the values are reset on every win or loss. 
+* A full page refresh will wipe the win/loss tracking.
