@@ -57,16 +57,32 @@ $(document).ready(function () {
     $("#amethyst").on("click", function(){
         potionProgress = potionProgress + amethyst;
         $("#potion-progress").text(potionProgress);
+        if (potionProgress === potionValue) {
+            win();
+        }
+        else if (potionProgress > potionValue) {
+            loss();
+        }
     });
     $("#dragon-glass").on("click", function(){
         potionProgress = potionProgress + dragonGlass;
         $("#potion-progress").text(potionProgress);
+        if (potionProgress === potionValue) {
+            win();
+        }
+        else if (potionProgress > potionValue) {
+            loss();
+        }
     });
     $("#heartstone").on("click", function(){
         potionProgress = potionProgress + heartstone;
         $("#potion-progress").text(potionProgress);
+        if (potionProgress === potionValue) {
+            win();
+        }
+        else if (potionProgress > potionValue) {
+            loss();
+        }
     });
-
-    //function to compare wins/losses
 
 });
