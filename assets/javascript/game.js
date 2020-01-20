@@ -4,10 +4,10 @@ $(document).ready(function () {
     $("#potion-score").text("Target Potion Value: " + potionValue);
     //Global variables go here!!
     //variables for each button to hold the randomly assigned value
-    var magnesiumPyrite;
-    var amethyst;
-    var dragonGlass;
-    var heartstone;
+    var magnesiumPyrite = Math.floor(Math.random() * 11 + 1);
+    var amethyst = Math.floor(Math.random() * 11 + 1);
+    var dragonGlass = Math.floor(Math.random() * 11 + 1);
+    var heartstone = Math.floor(Math.random() * 11 + 1);
     //variables to hold win/loss values
     var wins = 0;
     var losses = 0;
