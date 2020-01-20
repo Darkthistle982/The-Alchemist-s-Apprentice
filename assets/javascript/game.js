@@ -48,6 +48,7 @@ $(document).ready(function () {
     $("#magnesium-pyrite").on("click", function(){
         potionProgress = potionProgress + magnesiumPyrite;
         $("#potion-progress").text(potionProgress);
+        $("#crystalAdd")[0].play();
         if (potionProgress === potionValue) {
             win();
         }
@@ -58,6 +59,7 @@ $(document).ready(function () {
     $("#amethyst").on("click", function(){
         potionProgress = potionProgress + amethyst;
         $("#potion-progress").text(potionProgress);
+        $("#crystalAdd")[0].play();
         if (potionProgress === potionValue) {
             win();
         }
@@ -68,6 +70,7 @@ $(document).ready(function () {
     $("#dragon-glass").on("click", function(){
         potionProgress = potionProgress + dragonGlass;
         $("#potion-progress").text(potionProgress);
+        $("#crystalAdd")[0].play();
         if (potionProgress === potionValue) {
             win();
         }
@@ -78,6 +81,7 @@ $(document).ready(function () {
     $("#heartstone").on("click", function(){
         potionProgress = potionProgress + heartstone;
         $("#potion-progress").text(potionProgress);
+        $("#crystalAdd")[0].play();
         if (potionProgress === potionValue) {
             win();
         }
