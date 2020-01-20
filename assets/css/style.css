@@ -1,9 +1,17 @@
+body {
+    background-image: url("../images/prism.png");
+}
+
 p {
     font-family: 'Almendra', serif;
     font-weight: bold;
     font-size: large;
 }
 
-body {
-    background-image: url("../images/prism.png");
+#finalsection {
+    padding-bottom: 5px;
+}
+
+h2 {
+    padding-top: 10px;
 }
