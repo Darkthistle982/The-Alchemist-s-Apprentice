@@ -23,6 +23,9 @@ Credit to Music from https://filmmusic.io
         "Sneaky Snitch" by Kevin MacLeod (https://incompetech.com)
         License: CC BY (http://creativecommons.org/licenses/by/4.0/)
 
+"Splash, Small, A.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
+
+
 ## Details of application
 * Each button is assigned a random number between 1 and 12.
 * The target Potion Value is randomly generated as a number between 19 and 120.
