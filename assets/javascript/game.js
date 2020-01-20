@@ -12,6 +12,8 @@ $(document).ready(function () {
     var losses = 0;
     //variable to hold potion progress value
     var potionProgress = 0;
+    //variable to hold the audio command
+    var music = document.getElementById("background-music");
     //logic to push progress, wins and losses to the page
     $("#potion-progress").text(potionProgress);
     $("#wins").text("Wins: " + wins);
@@ -84,5 +86,5 @@ $(document).ready(function () {
             loss();
         }
     });
-
+    music.play();
 });
