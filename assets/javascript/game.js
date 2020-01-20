@@ -47,6 +47,12 @@ $(document).ready(function () {
         potionProgress = potionProgress + magnesiumPyrite;
         // console.log(potionProgress);
         $("#potion-progress").text(potionProgress);
+        if (potionProgress === potionValue) {
+            win();
+        }
+        else if (potionProgress > potionValue) {
+            loss();
+        }
     });
     $("#amethyst").on("click", function(){
         potionProgress = potionProgress + amethyst;
@@ -60,4 +66,7 @@ $(document).ready(function () {
         potionProgress = potionProgress + heartstone;
         $("#potion-progress").text(potionProgress);
     });
+
+    //function to compare wins/losses
+
 });
