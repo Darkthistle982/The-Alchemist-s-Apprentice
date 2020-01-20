@@ -42,4 +42,13 @@ $(document).ready(function () {
         $("#losses").text("Losses: " + losses);
         reset();
     }
+    //set click function and passthrough logic for each click
+    $("#magnesium-pyrite").on("click", function(){
+        potionProgress = potionProgress + magnesiumPyrite;
+        // console.log(potionProgress);
+        $("#potion-progress").text(potionProgress);
+    });
+
+
+
 });
