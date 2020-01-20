@@ -33,7 +33,8 @@
             number needed to complete your potion. Match the number exactly, and you will add one more magical potion to
             your arsenal, but beware, as if you overdo it, the results could be disastrous!</p>
         <br>
-        <p id="finalsection">Each crystal will add a different amount to your potion, but you won't know how much until you add it. Also,
+        <p id="finalsection">Each crystal will add a different amount to your potion, but you won't know how much until
+            you add it. Also,
             each crystal will add a different amount to each potion. Pay attention as you add, and think carefully to
             avoid overdoing it.</p>
     </section>
@@ -42,7 +43,6 @@
             <div class="card text-center bg-dark text-white">
                 <div class="card-body">
                     <p id="potion-score" class="card-title"></p>
-                    <!-- <img src="./assets/images/cauldron-4564688_1920.png" class=""> -->
                 </div>
             </div>
             <div class="card text-center bg-success">
@@ -50,7 +50,6 @@
                     <p id="wins" class="card-text">TEXT GOES HERE</p>
                     <p id="losses" class="card-text">TEXT GOES HERE</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -59,25 +58,25 @@
         <div class="row card-deck">
             <button id="magnesium-pyrite" class="card text-center">
                 <div class="card-body">
-                    <img  src="./assets/images/grant-durr--PvZUBrJarM-unsplash.jpg" class="p-1">
+                    <img src="./assets/images/grant-durr--PvZUBrJarM-unsplash.jpg" class="p-1">
                     <p class="card-text">Magnesium Pyrite</p>
                 </div>
             </button>
             <button id="amethyst" class="card text-center">
                 <div class="card-body">
-                <img  src="./assets/images/ilze-lucero-jLWLxX6i3R8-unsplash.jpg" class="p-1">
-                <p class="card-text">Amethyst</p>
-            </div>
-         </button>
+                    <img src="./assets/images/ilze-lucero-jLWLxX6i3R8-unsplash.jpg" class="p-1">
+                    <p class="card-text">Amethyst</p>
+                </div>
+            </button>
             <button id="dragon-glass" class="card text-center">
                 <div class="card-body">
-                    <img  src="./assets/images/jason-d--XvhrIC1Mhc-unsplash.jpg" class="p-1">
+                    <img src="./assets/images/jason-d--XvhrIC1Mhc-unsplash.jpg" class="p-1">
                     <p class="card-text">Dragon Glass</p>
                 </div>
             </button>
             <button id="heartstone" class="card text-center">
                 <div class="card-body">
-                    <img  src="./assets/images/jason-d-JKRXPwUoFt0-unsplash.jpg" class="p-1">
+                    <img src="./assets/images/jason-d-JKRXPwUoFt0-unsplash.jpg" class="p-1">
                     <p class="card-text">Heartstone</p>
                 </div>
             </button>
@@ -85,11 +84,22 @@
     </section>
 
     <section class="container">
-        <p>Potion progress:</p>
-        <div id="potion-progress"></div>
+        <div class="row card-deck mt-4">
+            <div class="card">
+                <div class="card-body text-white bg-dark">
+                    <p class="card-title">Potion progress:</p>
+                    <div id="potion-progress" class="card-subtitle"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body bg-dark">
+                 <img src="./assets/images/cauldron-4564688_1920.png" class="card-img-top">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <audio controls class="">
+    <audio controls class="m-5">
         <source src="./assets/audio/4384-sneaky-snitch-by-kevin-macleod.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         <!-- Music from https://filmmusic.io
