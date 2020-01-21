@@ -30,6 +30,15 @@ $(document).ready(function () {
         potionProgress = 0;
         $("#potion-progress").text(potionProgress);
     }
+    //compare function
+    function checkForWinLoss() {
+        if (potionProgress === potionValue) {
+            win();
+        }
+        else if (potionProgress > potionValue) {
+            loss();
+        }
+    }
     //function to run on a win condition
     function win() {
         $("#success")[0].play();
@@ -39,7 +48,7 @@ $(document).ready(function () {
     }
     //function to run on a loss condition
     function loss() {
-        $("#audio#explosion")[0].play();
+        $("#explosion")[0].play();
         losses++;
         $("#losses").text("Losses: " + losses);
         reset();
@@ -48,46 +57,28 @@ $(document).ready(function () {
     $("#magnesium-pyrite").on("click", function(){
         potionProgress = potionProgress + magnesiumPyrite;
         $("#potion-progress").text(potionProgress);
+        checkForWinLoss();
         $("#crystalAdd")[0].play();
-        if (potionProgress === potionValue) {
-            win();
-        }
-        else if (potionProgress > potionValue) {
-            loss();
-        }
     });
     $("#amethyst").on("click", function(){
         potionProgress = potionProgress + amethyst;
         $("#potion-progress").text(potionProgress);
+        checkForWinLoss();
         $("#crystalAdd")[0].play();
-        if (potionProgress === potionValue) {
-            win();
-        }
-        else if (potionProgress > potionValue) {
-            loss();
-        }
     });
     $("#dragon-glass").on("click", function(){
         potionProgress = potionProgress + dragonGlass;
         $("#potion-progress").text(potionProgress);
+        checkForWinLoss();
         $("#crystalAdd")[0].play();
-        if (potionProgress === potionValue) {
-            win();
-        }
-        else if (potionProgress > potionValue) {
-            loss();
-        }
+
     });
     $("#heartstone").on("click", function(){
         potionProgress = potionProgress + heartstone;
         $("#potion-progress").text(potionProgress);
+        checkForWinLoss();
         $("#crystalAdd")[0].play();
-        if (potionProgress === potionValue) {
-            win();
-        }
-        else if (potionProgress > potionValue) {
-            loss();
-        }
+
     });
     music.play();
 });
