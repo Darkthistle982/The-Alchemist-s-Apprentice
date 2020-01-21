@@ -71,14 +71,12 @@ $(document).ready(function () {
         $("#potion-progress").text(potionProgress);
         checkForWinLoss();
         $("#crystalAdd")[0].play();
-
     });
     $("#heartstone").on("click", function(){
         potionProgress = potionProgress + heartstone;
         $("#potion-progress").text(potionProgress);
         checkForWinLoss();
         $("#crystalAdd")[0].play();
-
     });
     music.play();
 });
