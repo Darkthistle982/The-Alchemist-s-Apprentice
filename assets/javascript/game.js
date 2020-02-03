@@ -18,9 +18,19 @@ $(document).ready(function () {
     $("#potion-progress").text(potionProgress);
     $("#wins").text("Wins: " + wins);
     $("#losses").text("Losses: " + losses);
-    
+
+    //logic to set the cauldron image at startup
+    function setCauldron() {
+        var cauldronImg = $("<img>");
+        cauldronImg.attr("src", "./assets/images/cauldron-4564688_1920.png");
+        cauldronImg.addClass("card-img-top");
+        $("#brewing").append(cauldronImg);
+    }
+    setCauldron();
     //function to restart the game upon win/loss
-    function reset(){
+    function reset() {
+        $("#brewing").empty();
+        setCauldron();
         potionValue = Math.floor(Math.random() * 101 + 19);
         $("#potion-score").text("Target Potion Value: " + potionValue);
         magnesiumPyrite = Math.floor(Math.random() * 11 + 1);
@@ -44,35 +54,44 @@ $(document).ready(function () {
         $("#success")[0].play();
         wins++;
         $("#wins").text("Wins: " + wins);
-        reset();
+        setTimeout(reset, 5 * 1000);
+    }
+    //logic to set the explosion img on a loss
+    function setExplosion() {
+        var explosionImg = $("<img>");
+        explosionImg.attr("src", "./assets/images/explosion.jpg");
+        explosionImg.addClass("card-img-top");
+        $("#brewing").append(explosionImg);
     }
     //function to run on a loss condition
     function loss() {
         $("#explosion")[0].play();
         losses++;
         $("#losses").text("Losses: " + losses);
-        reset();
+        $("#brewing").empty();
+        setExplosion();
+        setTimeout(reset, 5 * 1000);
     }
     //set click function and passthrough logic for each click
-    $("#magnesium-pyrite").on("click", function(){
+    $("#magnesium-pyrite").on("click", function () {
         potionProgress = potionProgress + magnesiumPyrite;
         $("#potion-progress").text(potionProgress);
         checkForWinLoss();
         $("#crystalAdd")[0].play();
     });
-    $("#amethyst").on("click", function(){
+    $("#amethyst").on("click", function () {
         potionProgress = potionProgress + amethyst;
         $("#potion-progress").text(potionProgress);
         checkForWinLoss();
         $("#crystalAdd")[0].play();
     });
-    $("#dragon-glass").on("click", function(){
+    $("#dragon-glass").on("click", function () {
         potionProgress = potionProgress + dragonGlass;
         $("#potion-progress").text(potionProgress);
         checkForWinLoss();
         $("#crystalAdd")[0].play();
     });
-    $("#heartstone").on("click", function(){
+    $("#heartstone").on("click", function () {
         potionProgress = potionProgress + heartstone;
         $("#potion-progress").text(potionProgress);
         checkForWinLoss();
