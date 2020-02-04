@@ -18,6 +18,14 @@ $(document).ready(function () {
     $("#potion-progress").text(potionProgress);
     $("#wins").text("Wins: " + wins);
     $("#losses").text("Losses: " + losses);
+    reset();
+
+    //function to set the target potion data
+    function potionInProgress (){
+        var potionType = ["Oil of Etherealness", "Oil of Sharpness", "Oil of Slipperiness", "Philter of Love", "Potion of Animal Friendship", "Potion of Clairvoyance", "Potion of Climbing", "Potion of Diminution", "Potion of Flying", "Potion of Gaseous Form", "Potion of Giant Strength", "Potion of Growth", "Potion of Healing", "Potion of Greater Healing", "Potion of Superior Healing", "Potion of Supreme Healing", "Potion of Heroism", "Potion of Invisibility", "Potion of Mind Reading", "Potion of Poison", "Potion of Resistance", "Potion of Speed", "Potion of Water Breathing"]
+        selectedPotion = potionType[Math.floor(Math.random() * potionType.length)];
+        $("#p-i-p").text(selectedPotion);
+    }
 
     //logic to set the cauldron image at startup
     function setCauldron() {
@@ -26,11 +34,12 @@ $(document).ready(function () {
         cauldronImg.addClass("card-img-top");
         $("#brewing").append(cauldronImg);
     }
-    setCauldron();
     //function to restart the game upon win/loss
     function reset() {
+        music.play();
         $("#brewing").empty();
         setCauldron();
+        potionInProgress();
         potionValue = Math.floor(Math.random() * 101 + 19);
         $("#potion-score").text("Target Potion Value: " + potionValue);
         magnesiumPyrite = Math.floor(Math.random() * 11 + 1);
@@ -97,5 +106,4 @@ $(document).ready(function () {
         checkForWinLoss();
         $("#crystalAdd")[0].play();
     });
-    music.play();
 });
