@@ -4,7 +4,7 @@
 * Application rules/Operation
 * Tech used
 * Details of applicaiton
-
+* Link to Live Project
 
 ## Application rules/Operation
 
@@ -32,3 +32,5 @@ Credit to Music from https://filmmusic.io
 * The value assigned to each crystal button is hidden from the user. 
 * A new game starts, and the values are reset on every win or loss. 
 * A full page refresh will wipe the win/loss tracking.
+
+### Link to Live Project: https://darkthistle982.github.io/unit-4-game/
