@@ -33,4 +33,4 @@ Credit to Music from https://filmmusic.io
 * A new game starts, and the values are reset on every win or loss. 
 * A full page refresh will wipe the win/loss tracking.
 
-### Link to Live Project: https://darkthistle982.github.io/unit-4-game/
+### Link to Live Project: https://darkthistle982.github.io/The-Alchemist-s-Apprentice/
