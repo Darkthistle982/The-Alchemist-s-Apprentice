@@ -17,6 +17,7 @@ The basic app generates a random value to the Target Potion Value field and disp
 * Javascript
 * JQuery
 * Google Fonts
+* Fontawesome
 * Audio track from Incompetech.com 
 
 Credit to Music from https://filmmusic.io
